@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>広告表示</title>
+    <style>
+        /* 画面全体の中央に画像を表示する設定（不要なら削除可） */
+        body {
+            display: flex;
+            justify-content: center; /* 横方向の中央 */
+            align-items: center;    /* 縦方向の中央 */
+            min-height: 100vh;     /* 画面の高さ一杯 */
+            margin: 0;
+            background-color: #fff; /* 背景は白 */
+        }
+        
+        /* 画像自体の設定 */
+        a img {
+            border: none;          /* 枠線を消す */
+            cursor: pointer;       /* マウスを乗せたら指マークにする */
+            outline: none;         /* クリック時の青い線を消す */
+        }
+    </style>
+</head>
+<body>
+
+    <a href="{{ url_for('ad_click') }}" target="_blank">
+        <img src="/static/amaプラ.jpg" alt="広告バナー">
+    </a>
+
+</body>
+</html>
